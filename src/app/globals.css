@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* 1. Paperozi 폰트 정의 (주신 코드 그대로) */
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+/* 2. 테마 설정 */
+@theme {
+  /* Tailwind의 기본 font-sans를 Paperozi로 덮어쓰기 */
+  --font-sans: 'Paperozi', system-ui, sans-serif;
+  
+  /* 제목용 명조체 (layout.tsx 변수와 연결) */
+  --font-serif: var(--font-serif), "Batang", serif;
+
+  --animate-fade-in: fadeIn 1.2s ease-out forwards;
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* 3. 기본 스타일 강제 적용 */
+html, body {
+  background-color: #F9F7F2;
+  color: #4A4036;
+  scroll-behavior: smooth;
+  /* ★ 여기서 확실하게 지정 */
+  font-family: 'Paperozi', system-ui, sans-serif;
+}
+
+::selection {
+  background-color: #8C7B6C; 
+  color: #fff;
+}

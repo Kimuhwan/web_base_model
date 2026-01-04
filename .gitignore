@@ -1,0 +1,20 @@
+# .gitignore
+
+# 1. 의존성 파일 (절대 올리면 안 됨)
+node_modules/
+
+# 2. 빌드 결과물
+.next/
+out/
+build/
+
+# 3. 환경 변수 및 보안 키 (★ 필수 확인)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 4. 기타
+.DS_Store
+*.log
